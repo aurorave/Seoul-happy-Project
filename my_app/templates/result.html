@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seoulite 여러분, 안녕하신가요?</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <style>
+      #form_id{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+  
+      .form-group{
+          width: 50%;
+          margin-top: 50px;
+      }
+      #demo{
+          text-align: center;
+          color: firebrick;
+          font-size: larger;
+          font-weight: 900;
+  
+      }
+  </style>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </head>
+<body>
+    <center>
+        <h1><br>서울시민인 당신의 삶, 그 만족도는? </h1><br><br>
+
+    {%if data > 205%}
+    <h3 class = "green-text" style = "color: green;">내 상황이 주변을 돌아볼만큼 여유롭다면, 한번쯤 그 여유를 나눠보실 생각은 없으신가요? <br> Sharing is caring! </h3><br>
+    <h3>(아래 이미지를 클릭해주세요!)</h3>
+    <a href="https://volunteer.seoul.go.kr/?menuno=52">
+    <img src='static/noun-care-1309510.png'></a>
+
+    {%elif data == 205%}
+    <h3 class = "purple-text" style = "color: purple;">평균 수준입니다. 가끔 좋아하는 공연을 보고 디저트를 먹으며 기분전환 하는것도 좋겠어요!</h3><br>
+    <h3>(아래 이미지를 클릭해주세요!)</h3>
+    <a href="https://culture.seoul.go.kr/culture/main/main.do">
+    <img src='static/noun-dessert-1309510.png'></a>
+
+    {%else %}
+    <h3 class = "blue-text" style = "color: blue;">혹시 요즘 좀 지치셨나요?<br>쉬어가길 원하신다면, 아래 이미지를 눌러보세요.</h3>
+    <a href = "https://blutouch.net/">
+    <img src='static/noun-relax-3973688.png'></a>
+
+
+    {%endif%}
+
+        <br><br>
+    <a href='/'>go back to home page</a>
+    </center>
+</body>
+</html>
